@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.14758903, y: -0.061606538, z: 0.009211412, w: 0.9870853}
-  m_LocalPosition: {x: 0.5, y: 1.734, z: -3.98}
+  m_LocalPosition: {x: 0.5, y: 1.8199999, z: -3.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -323,6 +323,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  jumpForce: 4
+  chargeForce: 5
+  isGrounded: 1
 --- !u!54 &366360651
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -433,7 +436,7 @@ Transform:
   m_GameObject: {fileID: 366360649}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.504, z: 0}
+  m_LocalPosition: {x: 0, y: 0.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -623,7 +626,7 @@ GameObject:
   - component: {fileID: 1378490886}
   m_Layer: 0
   m_Name: plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -815,7 +818,7 @@ Transform:
   m_GameObject: {fileID: 1658338948}
   serializedVersion: 2
   m_LocalRotation: {x: 0.14758903, y: -0.061606538, z: 0.009211412, w: 0.9870853}
-  m_LocalPosition: {x: 0.5, y: 1.734, z: -3.98}
+  m_LocalPosition: {x: 0.5, y: 1.8199999, z: -3.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
