@@ -2,45 +2,43 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    private const float Ymin = -50.0f;
-    private const float Ymax = 50.0f;
+    public float moveSpeed = 5f;
+    public float cameraSensitivity = 2f; //For camera rotation
 
-    public Transform lookAt;
+    private CharacterController characterController;
+    private Transform cameraTransform;
 
-    public Transform Player;
-
-    public float distance = 10.0f;
-    private float currentX = 0.0f;
-    private float currentY = 0.0f;
-    public float sensivity = 4.0f;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        characterController = GetComponent<CharacterController>();
+        cameraTransform = Camera.main.transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        currentX += Input.GetAxis("Mouse X") * sensivity * Time.deltaTime;
-        currentY += Input.GetAxis("Mouse Y") * sensivity * Time.deltaTime;
+        // Get input for movement
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
 
-        currentY = Mathf.Clamp(currentY, Ymin, Ymax);
+        // Calculate movement direction
+        Vector3 moveDirection = Vector3.zero;
+        if (verticalInput != 0)
+        {
+            moveDirection += cameraTransform.forward * verticalInput;
+        }
+        if (horizontalInput != 0)
+        {
+            moveDirection += cameraTransform.right * horizontalInput;
+        }
 
-        Vector3 Direction = new Vector3(0, 0, -distance);
-        Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
-        transform.position = lookAt.position + rotation * Direction;
+        // Normalize the movement direction
+        if (moveDirection.magnitude > 1)
+        {
+            moveDirection.Normalize();
+        }
 
-        transform.LookAt(lookAt.position);
+        // Apply movement
+        moveDirection *= moveSpeed;
+        characterController.Move(moveDirection * Time.deltaTime);
     }
-    
-    //void LateUpdate()
-    //{
-
-        
-
-     
-
-    //}
 }
