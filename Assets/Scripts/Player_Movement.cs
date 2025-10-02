@@ -21,9 +21,6 @@ public class Player_Movement : MonoBehaviour
     public float mouseSensitivityY = 2.0f; // How much the camera rotates vertically
 
     public float _xRotation = 0.0f;
-    //private float _yRotation = 0.0f;
-
-
 
 
     void Start()
@@ -72,37 +69,9 @@ public class Player_Movement : MonoBehaviour
         // Apply the input to camera rotation
         _xRotation += mouseX;
 
-        // Keep the y-axis rotation within a reasonable range (e.g., up/down)
-        //_yRotation = Mathf.Clamp(0, -90f, 90f);
-
         // Rotate the camera
         transform.rotation = Quaternion.Euler(0, _xRotation, 0);
     }
-
-    /*public void CameraMovement()
-    {
-        float Horizontal = Input.GetAxis("Horizontal") * camSpeed * Time.deltaTime;
-        float Vertical = Input.GetAxis("Vertical") * camSpeed * Time.deltaTime;
-
-        Vector3 Movement = Cam.transform.right * Horizontal + Cam.transform.forward * Vertical;
-        Movement.y = 0f;
-
-
-
-        controller.Move(Movement);
-
-        if (Movement.magnitude != 0f)
-        {
-            transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * Cam.GetComponent<Camera>().sensivity * Time.deltaTime);
-
-            Quaternion CamRotation = Cam.rotation;
-            CamRotation.x = 0f;
-            CamRotation.z = 0f;
-
-            transform.rotation = Quaternion.Lerp(transform.rotation, CamRotation, 0.1f);
-
-        }
-    }*/
 }
 
 
