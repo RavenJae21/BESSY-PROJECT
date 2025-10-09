@@ -24,18 +24,19 @@ public class Player_Charge : MonoBehaviour
 
     public void Charge()
     {
-        if (Input.GetButtonDown("Shift"))
+        if (Input.GetMouseButtonDown(0))
         {
             isCharging = true;
             currentChargeTime = 0f;
-            Debug.Log("YOUR HOLDING THE BUTTON DOWN!");
+            Debug.Log("YOUR PRESSING THE BUTTON");
         }
-        if (isCharging && Input.GetButtonDown("Shift"))
+        if (isCharging && Input.GetMouseButtonDown(0))
         {
             currentChargeTime += Time.deltaTime;
             currentChargeTime = Mathf.Min(currentChargeTime, maxChargeTime);
+            Debug.Log("HOLD IT!");
         }
-        if (Input.GetButtonUp("Shift"))
+        if (Input.GetMouseButtonUp(0))
         {
             isCharging = false;
             currentChargeTime = 0f;
