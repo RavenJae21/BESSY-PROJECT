@@ -1,41 +1,33 @@
-using System.Numerics;
 using UnityEngine;
 
 public class Player_Camera : MonoBehaviour
 {
-    public Transform target;      // Player
 
-    public UnityEngine.Vector3 offset = new UnityEngine.Vector3(0f, 2f, -4f);
-    
-    public float sensitivity = 100f;
-    public float rotationSmoothTime = 0.12f;
+    public float mouseSensitivityX = 2.0f; // How much the camera rotates horizontally
+    public float mouseSensitivityY = 2.0f; // How much the camera rotates vertically
+    public float _xRotation = 0.0f;
 
-    float yaw;   // Horizontal rotation
-    float pitch; // Vertical rotation
-
-    UnityEngine.Vector3 rotationSmoothVelocity;
-    UnityEngine.Vector3 currentRotation;
-
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+
     }
 
-    void LateUpdate()
+    // Update is called once per frame
+    void Update()
     {
-        // Mouse input
-        yaw += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-        pitch -= Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
-        pitch = Mathf.Clamp(pitch, -40f, 70f);
+        CameraLook();
+    }
+    
+    public void CameraLook()
+    {
+        // Get mouse input
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivityX;
 
-        // Smooth rotation
-        UnityEngine.Vector3 targetRotation = new UnityEngine.Vector3(pitch, yaw);
-        currentRotation = UnityEngine.Vector3.SmoothDamp(currentRotation, targetRotation, ref rotationSmoothVelocity, rotationSmoothTime);
+        // Apply the input to camera rotation
+        _xRotation += mouseX;
 
-        transform.eulerAngles = currentRotation;
-
-        // Follow target
-        transform.position = target.position + transform.rotation * offset;
+        // Rotate the camera
+        transform.rotation = Quaternion.Euler(0, _xRotation, 0);
     }
 }
