@@ -7,36 +7,20 @@ public class Player_Movement : MonoBehaviour
 {
     public float moveSpeed = 10f;//variable for move speed
     public float jumpForce = 4f;//variable for how high to jump
-    public float chargeDamage = 5f;//variable for how much charge damage
-    //public float camSpeed;
-    //public  Transform Cam;
-
+    
     public bool isGrounded = false;//bool for if the player is touching the ground
 
     private Rigidbody rb; //calling rigibody from unity
 
-    //public CharacterController controller;
-
-    public float mouseSensitivityX = 2.0f; // How much the camera rotates horizontally
-    public float mouseSensitivityY = 2.0f; // How much the camera rotates vertically
-
-    public float _xRotation = 0.0f;
-    //private float _yRotation = 0.0f;
-
-
-
-
     void Start()
     {
         rb = GetComponent<Rigidbody>(); //getting rigibody component
-        //controller = GetComponent<CharacterController>();//getting character controller
     }
 
     void Update()
     {
         PlayerMove();
         PlayerJump();
-        CameraLook();
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -64,45 +48,6 @@ public class Player_Movement : MonoBehaviour
         }
     }
 
-    public void CameraLook()
-    {
-        // Get mouse input
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivityX;
-
-        // Apply the input to camera rotation
-        _xRotation += mouseX;
-
-        // Keep the y-axis rotation within a reasonable range (e.g., up/down)
-        //_yRotation = Mathf.Clamp(0, -90f, 90f);
-
-        // Rotate the camera
-        transform.rotation = Quaternion.Euler(0, _xRotation, 0);
-    }
-
-    /*public void CameraMovement()
-    {
-        float Horizontal = Input.GetAxis("Horizontal") * camSpeed * Time.deltaTime;
-        float Vertical = Input.GetAxis("Vertical") * camSpeed * Time.deltaTime;
-
-        Vector3 Movement = Cam.transform.right * Horizontal + Cam.transform.forward * Vertical;
-        Movement.y = 0f;
-
-
-
-        controller.Move(Movement);
-
-        if (Movement.magnitude != 0f)
-        {
-            transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * Cam.GetComponent<Camera>().sensivity * Time.deltaTime);
-
-            Quaternion CamRotation = Cam.rotation;
-            CamRotation.x = 0f;
-            CamRotation.z = 0f;
-
-            transform.rotation = Quaternion.Lerp(transform.rotation, CamRotation, 0.1f);
-
-        }
-    }*/
 }
 
 
