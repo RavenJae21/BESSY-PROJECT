@@ -20,6 +20,11 @@ public class Player_Cam : MonoBehaviour
 
     void LateUpdate()
     {
+        PlayerLook();
+    }
+
+    public void PlayerLook()
+    {
         // Mouse input
         yaw += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
         pitch -= Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
