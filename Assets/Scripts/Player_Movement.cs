@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
@@ -21,18 +22,23 @@ public class Player_Movement : MonoBehaviour
         controller = GetComponent<CharacterController>();//getting character controller
     }
 
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+
+        if (other.gameObject.CompareTag("Collectible"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
     void Update()
     {
         PlayerMove();
         PlayerJump();
-    }
-
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
     }
 
     public void PlayerMove()

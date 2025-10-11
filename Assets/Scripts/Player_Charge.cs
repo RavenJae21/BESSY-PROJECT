@@ -20,7 +20,7 @@ public class Player_Charge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Charge();
     }
     
     public void Charge()
@@ -31,7 +31,7 @@ public class Player_Charge : MonoBehaviour
             isCharging = true;
             Debug.Log("Your pressing the button!");
         }
-        if (isCharging)
+        if (isCharging && Input.GetMouseButtonDown(0))
         {
             currentCharge += chargeRate * Time.deltaTime;//smoothly charges up
             currentCharge = Mathf.Min(currentCharge, maxCharge);//will not exceed max charge
