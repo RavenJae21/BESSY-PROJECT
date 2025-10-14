@@ -1,6 +1,8 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -25,24 +27,10 @@ public class Player_Movement : MonoBehaviour
         controller = GetComponent<CharacterController>();//getting character controller
     }
 
-    /*void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
-
-        if (other.gameObject.CompareTag("Collectible"))
-        {
-            Destroy(other.gameObject);
-        }
-    }*/
-
     void Update()
     {
         PlayerMove();
         PlayerJump();
-        //Camera();
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
@@ -71,10 +59,6 @@ public class Player_Movement : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir * moveSpeed * Time.deltaTime);
         }
-        /*float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
-        float yValue = 0f;
-        float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
-        transform.Translate(xValue, yValue, zValue);*/
     }
 
     public void PlayerJump()
@@ -98,33 +82,7 @@ public class Player_Movement : MonoBehaviour
 
         // Apply vertical motion
         controller.Move(velocity * Time.deltaTime);
-        
-        /*if (Input.GetButton("Jump") && isGrounded)
-        {
-            //rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
-        }*/
     }
-
-    /*public void Camera()
-    {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        Vector3 direction = new Vector3(h, 0, v).normalized;
-
-        if (direction.magnitude >= 0.1f)
-        {
-            // Rotate the player to face the camera direction while moving
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
-            Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f);
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * 10f);
-
-            // Move the player forward
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir * moveSpeed * Time.deltaTime);
-        }
-    }*/
 }
 
 
