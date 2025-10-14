@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6024195057631404397, guid: 292ec795e7d2ecd4aae4b04e9282cf5c, type: 3}
       propertyPath: m_MaxValue
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6024195057631404397, guid: 292ec795e7d2ecd4aae4b04e9282cf5c, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -755,6 +755,10 @@ PrefabInstance:
     - target: {fileID: 6193916386047331607, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
       propertyPath: maxCharge
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193916386047331607, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: chargeRate
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6193916386047331607, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
       propertyPath: chargeSlider

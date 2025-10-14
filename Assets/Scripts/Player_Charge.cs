@@ -12,12 +12,9 @@ public class Player_Charge : MonoBehaviour
 
     public Slider chargeSlider;
 
-    private Rigidbody rb; //calling rigibody from unity
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -33,7 +30,6 @@ public class Player_Charge : MonoBehaviour
         {
             currentCharge = 0f;
             isCharging = true;
-            Debug.Log("Your pressing the button!");
         }
         if (isCharging && Input.GetMouseButton(0))
         {
@@ -45,7 +41,6 @@ public class Player_Charge : MonoBehaviour
         {
             currentCharge = 0f;
             isCharging = false;
-            Debug.Log("You let go of the button!");
             UpdateUI();
         }
     }
