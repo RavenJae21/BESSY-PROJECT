@@ -18,12 +18,9 @@ public class Player_Movement : MonoBehaviour
     public bool isGrounded = false;//bool for if the player is touching the ground
     private CharacterController controller;
 
-    //private Rigidbody rb; //calling rigibody from unity
-
 
     void Start()
     {
-        //rb = GetComponent<Rigidbody>(); //getting rigibody component
         controller = GetComponent<CharacterController>();//getting character controller
     }
 
@@ -31,14 +28,6 @@ public class Player_Movement : MonoBehaviour
     {
         PlayerMove();
         PlayerJump();
-    }
-
-    void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        if (hit.gameObject.CompareTag("Collectible"))
-        {
-            Destroy(hit.gameObject);
-        }
     }
 
     public void PlayerMove()
