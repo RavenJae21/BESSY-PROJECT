@@ -16,7 +16,6 @@ public class Player_Movement : MonoBehaviour
 
     public Vector3 velocity;
     public bool isGrounded = false;//bool for if the player is touching the ground
-    public AudioSource walkSound;
 
     private CharacterController controller;
 
@@ -24,7 +23,6 @@ public class Player_Movement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();//getting character controller
-        walkSound = GetComponent<AudioSource>();//getting audiosource 
     }
 
     void Update()
