@@ -392,6 +392,7 @@ MonoBehaviour:
   chargeRate: 50
   maxCharge: 100
   isCharging: 0
+  mooSound: {fileID: 0}
   chargeSlider: {fileID: 0}
 --- !u!114 &5438054944920245113
 MonoBehaviour:
@@ -406,6 +407,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectibles: {fileID: 0}
+  pickUpText: {fileID: 0}
+  collectible: {fileID: 0}
   currentCollectibles: 0
   maxCollectibles: 5
 --- !u!143 &8295671992793632590
