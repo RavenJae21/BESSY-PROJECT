@@ -314,7 +314,7 @@ PrefabInstance:
       addedObject: {fileID: 8295671992793632590}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e29455137f4106d448246bc4e689c46a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2748334508633572269}
+      addedObject: {fileID: 327214360124883530}
   m_SourcePrefab: {fileID: 100100000, guid: e29455137f4106d448246bc4e689c46a, type: 3}
 --- !u!1 &7196924823599276412 stripped
 GameObject:
@@ -338,7 +338,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.2, y: 0.47, z: 0.6}
   m_Center: {x: 0, y: 0, z: 0}
@@ -359,7 +359,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -399,7 +399,7 @@ MonoBehaviour:
   chargeRate: 50
   maxCharge: 100
   isCharging: 0
-  mooSound: {fileID: 2748334508633572269}
+  mooSound: {fileID: 0}
   chargeSlider: {fileID: 0}
 --- !u!114 &5438054944920245113
 MonoBehaviour:
@@ -443,7 +443,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.13, z: 0}
---- !u!82 &2748334508633572269
+--- !u!82 &327214360124883530
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -454,7 +454,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: a36e6ead1f6a440418249021d20eaf5c, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

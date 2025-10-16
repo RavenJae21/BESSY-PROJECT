@@ -30,7 +30,6 @@ public class Player_Collectibles : MonoBehaviour
             //add one if less than maxcollectibles
             if (currentCollectibles < maxCollectibles)
             {
-                //Debug.Log("Collectible!");
                 currentCollectibles ++;
                 UpdateText();
             }

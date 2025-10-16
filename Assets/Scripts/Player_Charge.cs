@@ -10,14 +10,16 @@ public class Player_Charge : MonoBehaviour
 
     public bool isCharging = false;//boolean for knowing if your charging
 
-    public AudioSource mooSound;
+    //audio clips
+    public AudioSource audioSource;
+    public AudioClip mooSound;
 
     public Slider chargeSlider;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        mooSound = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -40,16 +42,18 @@ public class Player_Charge : MonoBehaviour
             currentCharge = Mathf.Clamp(currentCharge, 0f, maxCharge);//will not exceed max charge
             UpdateUI();
         }
-        if (maxCharge == 100f && Input.GetMouseButtonUp(0))
-        {
-            mooSound.Play();
-        }
         if (Input.GetMouseButtonUp(0))
         {
+            if(currentCharge >= maxCharge)
+            {
+                if (audioSource != null && mooSound != null)
+                {
+                    audioSource.PlayOneShot(mooSound);
+                }
+            }
             currentCharge = 0f;
             isCharging = false;
             UpdateUI();
-            mooSound.Stop();
         }
     }
 
