@@ -5,6 +5,9 @@ using UnityEngine.UI;
 public class Player_Collectibles : MonoBehaviour
 {
     public TextMeshProUGUI collectibles;
+    public TextMeshProUGUI pickUpText;
+
+    public GameObject collectible;
 
     public int currentCollectibles = 0;
     public int maxCollectibles = 24;
@@ -27,7 +30,7 @@ public class Player_Collectibles : MonoBehaviour
             //add one if less than maxcollectibles
             if (currentCollectibles < maxCollectibles)
             {
-                Debug.Log("Collectible!");
+                //Debug.Log("Collectible!");
                 currentCollectibles ++;
                 UpdateText();
             }
