@@ -399,7 +399,8 @@ MonoBehaviour:
   chargeRate: 50
   maxCharge: 100
   isCharging: 0
-  mooSound: {fileID: 0}
+  audioSource: {fileID: 327214360124883530}
+  mooSound: {fileID: 8300000, guid: a36e6ead1f6a440418249021d20eaf5c, type: 3}
   chargeSlider: {fileID: 0}
 --- !u!114 &5438054944920245113
 MonoBehaviour:
