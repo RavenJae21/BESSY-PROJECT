@@ -7,7 +7,7 @@ public class Player_Collectibles : MonoBehaviour
     public TextMeshProUGUI collectibles;
 
     public int currentCollectibles = 0;
-    public int maxCollectibles = 5;
+    public int maxCollectibles = 24;
 
     public void Start()
     {
@@ -31,6 +31,7 @@ public class Player_Collectibles : MonoBehaviour
                 currentCollectibles ++;
                 UpdateText();
             }
+
         }
     }
 
