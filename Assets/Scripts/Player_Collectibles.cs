@@ -1,44 +1,66 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Player_Collectibles : MonoBehaviour
 {
-    public TextMeshProUGUI collectibles;
-    public TextMeshProUGUI pickUpText;
+    public TextMeshProUGUI collectibles;//slot for collectibles text
+    public TextMeshProUGUI pickUpText;//slot for pick up text
 
-    public GameObject collectible;
+    public GameObject collectible;//the game object that is being used for this
 
     public int currentCollectibles = 0;
     public int maxCollectibles = 24;
 
     public void Start()
     {
-        UpdateText();
+        //make sure pick up text is not showing when start
+        if (pickUpText != null)
+        {
+            pickUpText.gameObject.SetActive(false);
+        }
     }
 
-    void OnControllerColliderHit(ControllerColliderHit hit)
+    public void Update()
     {
-        if (hit.gameObject.CompareTag("Collectible"))
+        UpdateText();//update every frame
+        PickUpUI();
+    }
+    
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Collectible"))//searches to see if trigger has this tag
         {
-            //disable collider immediately to disable more than one hit
-            Collider col = hit.collider;
-            col.enabled = false;
-
-            Destroy(hit.gameObject);//destroy once player collides with this
-
-            //add one if less than maxcollectibles
-            if (currentCollectibles < maxCollectibles)
+            //if the pickuptext is null set it to true 
+            pickUpText.gameObject.SetActive(true);
+            Debug.Log("I SEE YOU");
+            if (pickUpText != null)
             {
-                currentCollectibles ++;
-                UpdateText();
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    //if E is pressed destroy the game obj and update UI
+                    Destroy(other.gameObject);
+                    currentCollectibles++;
+                }
             }
-
         }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        //if away from trigger turn off pick up text
+        pickUpText.gameObject.SetActive(false);
     }
 
     public void UpdateText()
     {
+        //to update number of collectibles 
         collectibles.text = "Collectables: " + currentCollectibles + "/" + maxCollectibles;
+    }
+
+    public void PickUpUI()
+    {
+        //show this text once in trigger event
+        pickUpText.text = "Press E to pick up";
     }
 }

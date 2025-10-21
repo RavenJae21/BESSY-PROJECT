@@ -2,17 +2,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; set; }
-
-    private void Awake()
+    /*void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-        }
-    }
+        //cursor is invisible on awake of the game
+        Cursor.visible = false;
+
+        //lock the cursor in the middle 
+        Cursor.lockState = CursorLockMode.Locked;
+    }*/
 }
