@@ -1260,7 +1260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &533760324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2729,6 +2729,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1012023766003095594, guid: f10c96bd2a19b5149834814777eb1bdf, type: 3}
   m_PrefabInstance: {fileID: 518056156}
   m_PrefabAsset: {fileID: 0}
+--- !u!143 &1045690879 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 8295671992793632590, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+  m_PrefabInstance: {fileID: 1454426298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1096130701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3341,9 +3346,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 562270289}
     - target: {fileID: 6193916386047331607, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1045690879}
+    - target: {fileID: 6193916386047331607, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: lungeSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193916386047331607, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
       propertyPath: chargeSlider
       value: 
       objectReference: {fileID: 1763516365}
+    - target: {fileID: 6193916386047331607, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: lungeDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7196924823599276412, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
       propertyPath: m_Name
       value: Cow
