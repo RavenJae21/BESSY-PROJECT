@@ -3312,6 +3312,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1780249518609353109, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209777723236684904, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687163149359267351, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: gravity
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687163149359267351, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5438054944920245113, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
       propertyPath: pickUpText
       value: 
@@ -4067,8 +4083,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1852416800}
   - component: {fileID: 1852416799}
+  - component: {fileID: 1852416801}
   m_Layer: 0
-  m_Name: GameManage
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4104,6 +4121,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1852416801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852416798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad9684050c8581478daae35eb930490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1874669226
 GameObject:
   m_ObjectHideFlags: 0

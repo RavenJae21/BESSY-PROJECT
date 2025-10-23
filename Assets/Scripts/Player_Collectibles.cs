@@ -27,14 +27,13 @@ public class Player_Collectibles : MonoBehaviour
         UpdateText();//update every frame
         PickUpUI();
     }
-    
+
     void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Collectible"))//searches to see if trigger has this tag
         {
             //if the pickuptext is null set it to true 
             pickUpText.gameObject.SetActive(true);
-            Debug.Log("I SEE YOU");
             if (pickUpText != null)
             {
                 if (Input.GetKeyDown(KeyCode.E))
@@ -42,6 +41,7 @@ public class Player_Collectibles : MonoBehaviour
                     //if E is pressed destroy the game obj and update UI
                     Destroy(other.gameObject);
                     currentCollectibles++;
+                    pickUpText.gameObject.SetActive(false);
                 }
             }
         }
