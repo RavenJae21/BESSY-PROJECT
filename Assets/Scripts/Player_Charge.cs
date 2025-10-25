@@ -8,7 +8,7 @@ public class Player_Charge : MonoBehaviour
     public float lungeDamage = 5f;//variable for how much charge damage
     public float lungeDistance = 0f;//distance of lunge
     public float lungeSpeed = 0f;//how fast lunge is 
-    public bool isLunge = false;//determines if you are lunging
+    public bool isLunge = false;//determines if you are lun
 
     //Speed of charge up
     public float currentCharge = 0f;//starting charge
@@ -26,6 +26,7 @@ public class Player_Charge : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
     }
 
     void Update()
@@ -33,6 +34,16 @@ public class Player_Charge : MonoBehaviour
         //updates charge meter
         Charge();
         UpdateUI();
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        Health healthScript = other.GetComponent<Health>();
+
+        if (healthScript != null)
+        {
+            healthScript.TakeDamage(lungeDamage);
+        }
     }
 
     public void Charge()
