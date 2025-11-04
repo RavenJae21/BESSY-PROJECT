@@ -1,16 +1,16 @@
+using UnityEditor;
 using UnityEngine;
 
 public class HitBoxDamage : MonoBehaviour
 {
-    /*public Player_Charge playerCharge;
-
     public void OnTriggerEnter(Collider other)
     {
-        Health healthScript = other.GetComponent<Health>();
+        Health health = other.GetComponent<Health>();
+        Player_Charge charge = GetComponent<Player_Charge>();
 
-        if (healthScript != null)
+        if(other.CompareTag("Obstacles"))
         {
-            healthScript.TakeDamage(lungeDamage);
+            health.TakeDamage(charge.lungeDamage);
         }
-    }*/
+    }
 }

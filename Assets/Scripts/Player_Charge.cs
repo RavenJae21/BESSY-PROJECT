@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Player_Charge : MonoBehaviour
 {
     //lunge dmg, dist, spd
-    public float lungeDamage = 5f;//variable for how much charge damage
+    public float lungeDamage = 100f;
     public float lungeDistance = 0f;//distance of lunge
     public float lungeSpeed = 0f;//how fast lunge is 
     public bool isLunge = false;//determines if you are lun
@@ -52,7 +52,7 @@ public class Player_Charge : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))//if let go at max charge
         {
-            if(currentCharge >= maxCharge)
+            if (currentCharge >= maxCharge)
             {
                 StartCoroutine(PerformLunge());
             }
