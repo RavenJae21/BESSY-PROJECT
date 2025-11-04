@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class HitBoxDamage : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    /*public Player_Charge playerCharge;
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter(Collider other)
     {
-        
-    }
+        Health healthScript = other.GetComponent<Health>();
+
+        if (healthScript != null)
+        {
+            healthScript.TakeDamage(lungeDamage);
+        }
+    }*/
 }

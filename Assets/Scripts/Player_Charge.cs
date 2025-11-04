@@ -36,16 +36,6 @@ public class Player_Charge : MonoBehaviour
         UpdateUI();
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        Health healthScript = other.GetComponent<Health>();
-
-        if (healthScript != null)
-        {
-            healthScript.TakeDamage(lungeDamage);
-        }
-    }
-
     public void Charge()
     {
         if (Input.GetMouseButtonDown(0))//if press left click
