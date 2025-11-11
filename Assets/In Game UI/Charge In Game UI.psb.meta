@@ -95,28 +95,6 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Vector Smart Object
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 230
-      height: 239
-    spriteID: a99a2be018f26f2448b72fbfff6cbe8f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 845, y: 421}
   - name: Charge!
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -125,8 +103,8 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 346
+      x: 154
+      y: 4
       width: 92
       height: 27
     spriteID: 75f4a8e5ac0757f41b92fcc4904c7f35
@@ -137,7 +115,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 346}
+    uvTransform: {x: 154, y: 4}
     spritePosition: {x: 913, y: 533}
   - name: Vector Smart Object
     originalName: 
@@ -148,7 +126,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 251
+      y: 4
       width: 142
       height: 87
     spriteID: 37040e7f0a3235641998759596c6655b
@@ -159,7 +137,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 251}
+    uvTransform: {x: 4, y: 4}
     spritePosition: {x: 888, y: 501}
   - name: Layer 1
     originalName: 
@@ -169,8 +147,8 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 104
-      y: 346
+      x: 154
+      y: 39
       width: 0
       height: 0
     spriteID: 631bc1b5bd77c0141b6a76fa522c773f
@@ -181,7 +159,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 104, y: 346}
+    uvTransform: {x: 154, y: 39}
     spritePosition: {x: 0, y: 1080}
   spriteImportData: []
   rigSpriteImportData: []
@@ -206,23 +184,13 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Vector Smart Object
-    spriteName: Vector Smart Object
-    isGroup: 0
-    parentIndex: -1
-    spriteID: a99a2be018f26f2448b72fbfff6cbe8f
-    layerID: 5
-    mosaicPosition: {x: 4, y: 4}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
   - name: Charge!
     spriteName: Charge!
     isGroup: 0
     parentIndex: -1
     spriteID: 75f4a8e5ac0757f41b92fcc4904c7f35
     layerID: 4
-    mosaicPosition: {x: 4, y: 346}
+    mosaicPosition: {x: 154, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -232,7 +200,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 37040e7f0a3235641998759596c6655b
     layerID: 3
-    mosaicPosition: {x: 4, y: 251}
+    mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -242,7 +210,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 631bc1b5bd77c0141b6a76fa522c773f
     layerID: 2
-    mosaicPosition: {x: 104, y: 346}
+    mosaicPosition: {x: 154, y: 39}
     flatten: 0
     isImported: 1
     isVisible: 1
