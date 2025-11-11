@@ -854,6 +854,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 193696003}
     - target: {fileID: 6193916386047331607, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: isCharging
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193916386047331607, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
       propertyPath: chargeSlider
       value: 
       objectReference: {fileID: 1598596447}
