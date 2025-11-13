@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();//call when thing is at 0
+            Die();//call when health is at 0
         }
     }
 
