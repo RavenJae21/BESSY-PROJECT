@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Player_Collectibles : MonoBehaviour
 {
-    public TextMeshProUGUI collectibles;//slot for collectibles text
-    public TextMeshProUGUI pickUpText;//slot for pick up text
+    public TextMeshPro collectibles;//slot for collectibles text
+    public TextMeshPro pickUpText;//slot for pick up text
 
     public GameObject collectible;//the game object that is being used for this
 
@@ -61,6 +61,6 @@ public class Player_Collectibles : MonoBehaviour
     public void PickUpUI()
     {
         //show this text once in trigger event
-        pickUpText.text = "Press E to pick up";
+        pickUpText.text = "Press E to collect";
     }
 }
