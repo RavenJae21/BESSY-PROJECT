@@ -3,11 +3,17 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public float currentHealth = 100f;//the amount of health starting
+    public float currentHealth;//the amount of health starting
+    public float maxHealth = 100f;
 
-    public void TakeDamage(float lungeDamage)
+    void Start()
     {
-        currentHealth -= lungeDamage;//dmg will subtract hp
+        currentHealth = maxHealth;
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        currentHealth -= damageAmount;//dmg will subtract hp
 
         if (currentHealth <= 0)
         {

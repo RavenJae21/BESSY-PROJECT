@@ -4,8 +4,7 @@ using UnityEngine.UI;
 
 public class Player_Charge : MonoBehaviour
 {
-    //lunge dmg, dist, spd
-    public float lungeDamage = 100f;
+    //lunge dist, spd
     public float lungeDistance = 0f;//distance of lunge
     public float lungeSpeed = 0f;//how fast lunge is 
     public bool isLunge = false;//determines if you are lun
@@ -17,6 +16,8 @@ public class Player_Charge : MonoBehaviour
     public bool isCharging = false;//boolean for knowing if your charging
     public Slider chargeSlider;
 
+    public Collider hitBox;//reference to hitbox collider
+
     //audio clips
     public AudioSource audioSource;
     public AudioClip mooSound;
@@ -25,37 +26,42 @@ public class Player_Charge : MonoBehaviour
 
     void Start()
     {
-        controller = GetComponent<CharacterController>();
-
+        controller = GetComponent<CharacterController>();//controller for third person controller
+        hitBox.enabled = false; 
     }
 
     void Update()
     {
-        //updates charge meter
+        //updates charge meter and UI
         Charge();
         UpdateUI();
     }
 
     public void Charge()
     {
-        if (Input.GetMouseButtonDown(0))//if press left click
+        //current charge starts at 0 but is charging is true
+        if (Input.GetMouseButtonDown(0))
         {
             currentCharge = 0f;
             isCharging = true;
         }
-        if (isCharging && Input.GetMouseButton(0))//if let go
+        if (isCharging && Input.GetMouseButton(0))//if held down
         {
             currentCharge += chargeRate * Time.deltaTime;//smoothly charges up
             currentCharge = Mathf.Clamp(currentCharge, 0f, maxCharge);//will not exceed max charge
 
-            UpdateUI();
+            UpdateUI();//update charge bar to show the slow charge up
         }
         if (Input.GetMouseButtonUp(0))//if let go at max charge
         {
+            HitBoxDamage hitBoxDamage = GetComponent<HitBoxDamage>();
+
             if (currentCharge >= maxCharge)
             {
-                StartCoroutine(PerformLunge());
+                StartCoroutine(PerformLunge());//lunge will happen is current = max
             }
+
+            //current charge will start at 0 ischarging is false
             currentCharge = 0f;
             isCharging = false;
             UpdateUI();
@@ -73,7 +79,7 @@ public class Player_Charge : MonoBehaviour
     public IEnumerator PerformLunge()
     {
         isLunge = true;
-        float startTime = Time.time;
+        //float startTime = Time.time;
         Vector3 startPosition = transform.position;
         Vector3 targetPosition = startPosition + (transform.forward * lungeDistance);
 
@@ -81,9 +87,12 @@ public class Player_Charge : MonoBehaviour
         {
             controller.Move(transform.forward * lungeSpeed * Time.deltaTime);
 
+            hitBox.enabled = true;//enable the hitbox when lunge is being performed
+
             yield return null;
         }
 
+        hitBox.enabled = false;
         isLunge = false;
     }
 }
