@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Player_Collectibles : MonoBehaviour
 {
-    public TextMeshPro collectibles;//slot for collectibles text
-    public TextMeshPro pickUpText;//slot for pick up text
+    public TextMeshProUGUI collectibles;//slot for collectibles text
+    public TextMeshProUGUI pickUpText;//slot for pick up text
 
     public GameObject collectible;//the game object that is being used for this
 

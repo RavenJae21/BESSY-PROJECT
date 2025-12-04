@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 2796122385702797454}
   - component: {fileID: 4237225971131137465}
   - component: {fileID: 7116466619327822153}
+  - component: {fileID: 2509513812386996129}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -157,6 +158,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2509513812386996129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4086845099069185117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f015c79f195ea80488390e74ba1af802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 100
 --- !u!1 &8404180180796712615
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,14 +554,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2852e194468d024438e46f92ab57e061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lungeDistance: 0
-  lungeSpeed: 0
+  lungeDistance: 3
+  lungeSpeed: 10
   isLunge: 0
   currentCharge: 0
   chargeRate: 50
   maxCharge: 100
   isCharging: 0
   chargeSlider: {fileID: 0}
+  hitBox: {fileID: 7116466619327822153}
   audioSource: {fileID: 327214360124883530}
   mooSound: {fileID: 8300000, guid: a36e6ead1f6a440418249021d20eaf5c, type: 3}
   controller: {fileID: 8295671992793632590}
