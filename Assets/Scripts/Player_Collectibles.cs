@@ -30,7 +30,7 @@ public class Player_Collectibles : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Collectible"))//searches to see if trigger has this tag
+        if (other.CompareTag("Key"))//searches to see if trigger has this tag
         {
             //if the pickuptext is null set it to true 
             pickUpText.gameObject.SetActive(true);
@@ -55,7 +55,7 @@ public class Player_Collectibles : MonoBehaviour
     public void UpdateText()
     {
         //to update number of collectibles 
-        collectibles.text = "Collectables: " + currentCollectibles + "/" + maxCollectibles;
+        collectibles.text = "Key: " + currentCollectibles + "/" + maxCollectibles;
     }
 
     public void PickUpUI()

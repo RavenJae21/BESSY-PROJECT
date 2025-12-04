@@ -2547,6 +2547,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d94d7893372bb4409e9168c2ded88c0, type: 3}
+--- !u!114 &216993286 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 990697145173538777, guid: 292ec795e7d2ecd4aae4b04e9282cf5c, type: 3}
+  m_PrefabInstance: {fileID: 864611768}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &232860153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26257,7 +26268,7 @@ PrefabInstance:
     - target: {fileID: 5438054944920245113, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
       propertyPath: pickUpText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 216993286}
     - target: {fileID: 5438054944920245113, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
       propertyPath: collectible
       value: 
