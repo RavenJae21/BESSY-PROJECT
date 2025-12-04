@@ -1,7 +1,6 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player_Collectibles : MonoBehaviour
 {
@@ -30,7 +29,7 @@ public class Player_Collectibles : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Key"))//searches to see if trigger has this tag
+        if (other.CompareTag("Collectible"))//searches to see if trigger has this tag
         {
             //if the pickuptext is null set it to true 
             pickUpText.gameObject.SetActive(true);
@@ -41,6 +40,7 @@ public class Player_Collectibles : MonoBehaviour
                     //if E is pressed destroy the game obj and update UI
                     Destroy(other.gameObject);
                     currentCollectibles++;
+                    LoadNextScene();
                     pickUpText.gameObject.SetActive(false);
                 }
             }
@@ -62,5 +62,11 @@ public class Player_Collectibles : MonoBehaviour
     {
         //show this text once in trigger event
         pickUpText.text = "Press E to collect";
+    }
+
+     public void LoadNextScene()
+    {
+        // Load the scene with the next build index
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
