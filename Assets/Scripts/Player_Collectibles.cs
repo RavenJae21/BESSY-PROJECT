@@ -57,7 +57,7 @@ public class Player_Collectibles : MonoBehaviour
     public void UpdateText()
     {
         //to update number of collectibles 
-        collectibles.text = "Apples: " + currentCollectibles + "/" + maxCollectibles;
+        collectibles.text = "Keys: " + currentCollectibles + "/" + maxCollectibles;
     }
 
     public void PickUpUI()
