@@ -9,8 +9,8 @@ public class Player_Collectibles : MonoBehaviour
 
     public GameObject collectible;//the game object that is being used for this
 
-    public int currentCollectibles = 0;
-    public int maxCollectibles = 24;
+    public int currentCollectibles;
+    public int maxCollectibles;
 
     public void Start()
     {
@@ -69,6 +69,9 @@ public class Player_Collectibles : MonoBehaviour
         // Load the scene with the next build index
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         
-        
+        if (SceneManager.GetActiveScene().buildIndex == 2 && currentCollectibles == maxCollectibles)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }
