@@ -70,5 +70,7 @@ public class Player_Collectibles : MonoBehaviour
     {
         // Load the scene with the next build index
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
+        
     }
 }

@@ -582,7 +582,7 @@ MonoBehaviour:
   pickUpText: {fileID: 0}
   collectible: {fileID: 0}
   currentCollectibles: 0
-  maxCollectibles: 1
+  maxCollectibles: 3
 --- !u!143 &8295671992793632590
 CharacterController:
   m_ObjectHideFlags: 0
