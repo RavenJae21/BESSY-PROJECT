@@ -59,6 +59,7 @@ public class Player_Charge : MonoBehaviour
             if (currentCharge >= maxCharge)
             {
                 StartCoroutine(PerformLunge());//lunge will happen is current = max
+                //if ()
             }
 
             //current charge will start at 0 ischarging is false
