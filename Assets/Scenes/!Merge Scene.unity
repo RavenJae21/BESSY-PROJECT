@@ -2182,7 +2182,7 @@ PrefabInstance:
     - target: {fileID: 5438054944920245113, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
       propertyPath: pickUpText
       value: 
-      objectReference: {fileID: 1662031904}
+      objectReference: {fileID: 0}
     - target: {fileID: 5438054944920245113, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
       propertyPath: collectible
       value: 
@@ -2436,17 +2436,6 @@ CapsuleCollider:
   m_Height: 1.53
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1662031904 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4348876398573965251, guid: 292ec795e7d2ecd4aae4b04e9282cf5c, type: 3}
-  m_PrefabInstance: {fileID: 985960444}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1721699429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,6 +2943,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2760801396869452854, guid: d57c1e7ee44809c4cba5d3742ed32257, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2760801396869452854, guid: d57c1e7ee44809c4cba5d3742ed32257, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: af30076d51b407647967ce3d9e11d87f, type: 2}
     - target: {fileID: 3980082287468511749, guid: d57c1e7ee44809c4cba5d3742ed32257, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.886112
