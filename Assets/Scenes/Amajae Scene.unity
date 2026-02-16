@@ -21234,6 +21234,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2428994187186761873, guid: 77aa08ece24810444a9b1bd70da5461e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3008890769278468770, guid: 77aa08ece24810444a9b1bd70da5461e, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3008890769278468770, guid: 77aa08ece24810444a9b1bd70da5461e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2993614497359081343, guid: 418a486569df3da49ad26214c4c22508, type: 3}
     - target: {fileID: 4493304065160826166, guid: 77aa08ece24810444a9b1bd70da5461e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -21314,6 +21326,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6513320771985733661, guid: 77aa08ece24810444a9b1bd70da5461e, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 8713307909909743553, guid: 77aa08ece24810444a9b1bd70da5461e, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713307909909743553, guid: 77aa08ece24810444a9b1bd70da5461e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1219166187882513643, guid: 42b2fa7241cbf4046bfd17cf7e9a1e81, type: 3}
+    - target: {fileID: 8713307909909743553, guid: 77aa08ece24810444a9b1bd70da5461e, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730695352388173918, guid: 77aa08ece24810444a9b1bd70da5461e, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730695352388173918, guid: 77aa08ece24810444a9b1bd70da5461e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4463239202705078680, guid: 2be34dc1ddbd9294fb3c7f71dfaea132, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
