@@ -24,6 +24,8 @@ public class Player_Charge : MonoBehaviour
 
     public CharacterController controller;
 
+    public HitBoxDamage hitBoxDamage;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();//controller for third person controller
@@ -54,12 +56,10 @@ public class Player_Charge : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))//if let go at max charge
         {
-            HitBoxDamage hitBoxDamage = GetComponent<HitBoxDamage>();
-
             if (currentCharge >= maxCharge)
             {
                 StartCoroutine(PerformLunge());//lunge will happen is current = max
-                //if ()
+                hitBox.enabled = true;
             }
 
             //current charge will start at 0 ischarging is false
@@ -80,14 +80,20 @@ public class Player_Charge : MonoBehaviour
     public IEnumerator PerformLunge()
     {
         isLunge = true;
+        hitBoxDamage.ResetHit();
         //float startTime = Time.time;
         Vector3 startPosition = transform.position;
         Vector3 targetPosition = startPosition + (transform.forward * lungeDistance);
 
         while (Vector3.Distance(transform.position, targetPosition) > 0.1f)//as long as distance between player and target position is greater than 0.1 loop will continue
         {
-            controller.Move(transform.forward * lungeSpeed * Time.deltaTime);
+            CollisionFlags flags = controller.Move(transform.forward * lungeSpeed * Time.deltaTime);
 
+            if ((flags & CollisionFlags.Sides) != 0)
+            {
+                break; // stop if we hit a wall
+                
+            }
             hitBox.enabled = true;//enable the hitbox when lunge is being performed
 
             yield return null;
