@@ -28,8 +28,9 @@ public class Player_Movement : MonoBehaviour
         if (!player_Charge.isLunge)
         {
             PlayerMove();
-            PlayerJump();
         }
+
+        PlayerJump();
     }
 
     public void PlayerMove()
