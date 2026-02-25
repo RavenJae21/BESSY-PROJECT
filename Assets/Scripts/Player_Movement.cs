@@ -15,6 +15,8 @@ public class Player_Movement : MonoBehaviour
 
     private CharacterController controller;
 
+    public Player_Charge player_Charge;
+
 
     void Start()
     {
@@ -23,8 +25,11 @@ public class Player_Movement : MonoBehaviour
 
     void Update()
     {
-        PlayerMove();
-        PlayerJump();
+        if (!player_Charge.isLunge)
+        {
+            PlayerMove();
+            PlayerJump();
+        }
     }
 
     public void PlayerMove()
