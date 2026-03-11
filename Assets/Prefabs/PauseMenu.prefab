@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameIsPaused: 0
-  pauseKey: 27
+  pauseKey: 112
   pauseMenuUI: {fileID: 2428994187186761873}
 --- !u!1 &5104223935994682302
 GameObject:
