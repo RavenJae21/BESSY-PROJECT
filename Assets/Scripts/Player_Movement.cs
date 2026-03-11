@@ -17,6 +17,8 @@ public class Player_Movement : MonoBehaviour
 
     public Player_Charge player_Charge;
 
+    public Animator animator;
+
 
     void Start()
     {
@@ -31,6 +33,13 @@ public class Player_Movement : MonoBehaviour
         }
 
         PlayerJump();
+
+        
+
+
+
+
+
     }
 
     public void PlayerMove()
@@ -51,6 +60,8 @@ public class Player_Movement : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir * moveSpeed * Time.deltaTime);
         }
+
+        animator.SetFloat("speed", controller.velocity.magnitude);
     }
 
     public void PlayerJump()
