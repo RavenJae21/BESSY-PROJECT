@@ -8,8 +8,8 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void OptionsMenu() {
-        Debug.Log("You clicked Options");
+    public void ControlsMenu() {
+        Debug.Log("You clicked Controls");
     
     }
     public void QuitGame()
