@@ -257,7 +257,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: c7fac18569c93c2488717ec5da5686bc, type: 3}
+      - m_Target: {fileID: 11500000, guid: 20d96c3d73db031479400ffa59f8f54c, type: 3}
         m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
         m_MethodName: 
         m_Mode: 1
@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 6717408810336630003}
   - component: {fileID: 6059380216240771002}
   - component: {fileID: 8187069425652524200}
+  - component: {fileID: 3772918509411172833}
   m_Layer: 5
   m_Name: Control Canvas
   m_TagString: Untagged
@@ -385,6 +386,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7fac18569c93c2488717ec5da5686bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ControlsUI: {fileID: 7452564051271548059}
+--- !u!114 &3772918509411172833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452564051271548059}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d96c3d73db031479400ffa59f8f54c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ControlsOpen: 0
+  ControlsMenuUI: {fileID: 7452564051271548059}
 --- !u!1 &7958322690624558201
 GameObject:
   m_ObjectHideFlags: 0
