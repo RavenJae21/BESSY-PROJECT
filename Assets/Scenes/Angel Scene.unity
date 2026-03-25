@@ -46588,6 +46588,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3209777723236684904, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: m_Size.y
+      value: 0.46994567
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209777723236684904, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: m_Size.z
+      value: 0.6000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209777723236684904, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: m_Center.y
+      value: -0.00002717972
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687163149359267351, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: player_Charge
+      value: 
+      objectReference: {fileID: 2090306288}
     - target: {fileID: 5438054944920245113, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
       propertyPath: pickUpText
       value: 
@@ -46597,8 +46613,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1345595048}
     - target: {fileID: 5438054944920245113, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 1326180282}
+    - target: {fileID: 5438054944920245113, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
       propertyPath: maxCollectibles
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6193916386047331607, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
       propertyPath: chargeSlider
@@ -47496,6 +47516,10 @@ PrefabInstance:
     - target: {fileID: 1459793414219792, guid: 9ae45fdfc92844d42a484dd8a4e0ae0d, type: 3}
       propertyPath: m_Name
       value: Keycard 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459793414219792, guid: 9ae45fdfc92844d42a484dd8a4e0ae0d, type: 3}
+      propertyPath: m_TagString
+      value: Collectible
       objectReference: {fileID: 0}
     - target: {fileID: 4802720409474118, guid: 9ae45fdfc92844d42a484dd8a4e0ae0d, type: 3}
       propertyPath: m_LocalScale.x
@@ -63526,6 +63550,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keycard 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1459793414219792, guid: 9ae45fdfc92844d42a484dd8a4e0ae0d, type: 3}
+      propertyPath: m_TagString
+      value: Collectible
+      objectReference: {fileID: 0}
     - target: {fileID: 4802720409474118, guid: 9ae45fdfc92844d42a484dd8a4e0ae0d, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.7489
@@ -69860,6 +69888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: keypad (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1263456840087316, guid: 769d0371e7869b74db5b2dd0139d5279, type: 3}
+      propertyPath: m_TagString
+      value: Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 4099471975347110, guid: 769d0371e7869b74db5b2dd0139d5279, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.0406
@@ -70073,6 +70105,10 @@ PrefabInstance:
     - target: {fileID: 1263456840087316, guid: 769d0371e7869b74db5b2dd0139d5279, type: 3}
       propertyPath: m_Name
       value: keypad
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263456840087316, guid: 769d0371e7869b74db5b2dd0139d5279, type: 3}
+      propertyPath: m_TagString
+      value: Gate
       objectReference: {fileID: 0}
     - target: {fileID: 4099471975347110, guid: 769d0371e7869b74db5b2dd0139d5279, type: 3}
       propertyPath: m_LocalScale.x
@@ -71936,7 +71972,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 484815938}
+  m_Mesh: {fileID: 378161739}
 --- !u!33 &2074105861
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -72946,6 +72982,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 4c6f6c569f9f6cd4aa36702def42c80c, type: 3}
   m_PrefabInstance: {fileID: 2090004032}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2090306288 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6193916386047331607, guid: 2726c46d636c64147861bc03accfadc4, type: 3}
+  m_PrefabInstance: {fileID: 1365330470}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2852e194468d024438e46f92ab57e061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2095477130
 PrefabInstance:
   m_ObjectHideFlags: 0

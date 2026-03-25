@@ -572,6 +572,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 3967110904597414815}
   velocity: {x: 0, y: 0, z: 0}
   isGrounded: 0
+  player_Charge: {fileID: 0}
 --- !u!114 &6193916386047331607
 MonoBehaviour:
   m_ObjectHideFlags: 0
