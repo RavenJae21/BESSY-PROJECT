@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 4237225971131137465}
   - component: {fileID: 7116466619327822153}
   - component: {fileID: 2509513812386996129}
-  - component: {fileID: 3805243458531292275}
+  - component: {fileID: 3898586226817116995}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -174,7 +174,7 @@ MonoBehaviour:
   damageAmount: 100
   hasHit: 0
   player_Charge: {fileID: 6193916386047331607}
---- !u!54 &3805243458531292275
+--- !u!54 &3898586226817116995
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -425,7 +425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e29455137f4106d448246bc4e689c46a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -779.54
+      value: -763.21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e29455137f4106d448246bc4e689c46a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -433,7 +433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e29455137f4106d448246bc4e689c46a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 633.23
+      value: 670.18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e29455137f4106d448246bc4e689c46a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -572,7 +572,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 3967110904597414815}
   velocity: {x: 0, y: 0, z: 0}
   isGrounded: 0
-  player_Charge: {fileID: 0}
+  player_Charge: {fileID: 6193916386047331607}
 --- !u!114 &6193916386047331607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,8 +611,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectibles: {fileID: 0}
-  pickUpText: {fileID: 0}
-  collectible: {fileID: 0}
+  interactText: {fileID: 0}
+  keys: 
   currentCollectibles: 0
   maxCollectibles: 3
 --- !u!143 &8295671992793632590
